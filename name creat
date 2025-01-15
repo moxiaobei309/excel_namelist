@@ -1,0 +1,18 @@
+import random
+
+# 常见姓氏
+surnames = ['赵', '钱', '孙', '李', '周', '吴', '郑', '王', '冯', '陈', '褚', '卫', '蒋', '沈', '韩', '杨', '朱', '秦', '尤', '许']
+# 常见名字
+names = ['伟', '芳', '秀英', '娜', '敏', '静', '勇', '强', '军', '平', '丽', '刚', '杰', '峰', '辉', '超', '龙', '磊', '鹏', '涛']
+
+# 生成100个随机名字
+random_names = []
+for _ in range(100):
+    surname = random.choice(surnames)
+    name = random.choice(names)
+    random_names.append(surname + name)
+
+# 按行列排序展示，每行10个名字
+for i in range(0, 100, 10):
+    row_names = random_names[i:i + 10]
+    print(' '.join(row_names))
